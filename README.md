@@ -7,6 +7,8 @@
 1. 面向对象SUT（BPlusTree ~ Sudoku）
 2. 符号执行小程序（xx-examples）。
 
+:construction:python符号执行小程序还未编写完成；预期是和java小程序逻辑类似的python版本
+
 
 
 #### Tips
