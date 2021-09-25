@@ -2,10 +2,6 @@ public class Input {
 
     private int i64;
 
-    public Input(int a, int b) {
-        this.i64 = 64;
-    }
-
     public Input(int i) {
         if (i > 10) {
             System.out.println("\n-------- In <Init>(int)! i > 10");
@@ -46,19 +42,6 @@ public class Input {
         return i;
     }
 
-    public double bar(double d) {
-        System.out.println("\n-------- In bar! Parameter = " + d);
-
-        if (d >= 3.141) {
-            System.out.printf("%s\n", "d >= 3.141");
-        }
-
-        double as = Math.asin(d);
-        System.out.println("asin returned " + as);
-        if (Double.isNaN(as))
-            ;//throw new ArithmeticException("NaN");
-        return as;
-    }
 
     private static short zoo_sub(short j, float f) {
         if (f + j > 256) {
@@ -72,15 +55,6 @@ public class Input {
 
     public static short zoo(int i, short j, float f) {
         System.out.println("\n-------- In zoo! Parameters = " + i + ", " + j + ", " + f);
-
-        Integer boxI = i;
-        i = boxI.intValue();
-
-        Short boxJ = j;
-        j = boxJ.shortValue();
-
-        Float boxF = f;
-        f = boxF.floatValue();
 
         if (i > 73) {
             zoo_sub(j, f);
@@ -108,7 +82,6 @@ public class Input {
             inst.foo(-1024);
         } catch (AssertionError ex) {
         }
-        inst.bar(1.732);
         inst.zoo(1, (short) 2, (float) 1.414);
     }
 }
